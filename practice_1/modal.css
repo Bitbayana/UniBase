@@ -1,0 +1,201 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh
+}
+
+.modal-trigger {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    z-index: 1000;
+    overflow: auto;
+}
+
+.modal__content {
+    position: relative;
+    width: 80%;
+    margin: 50px auto;
+}
+
+
+.modal__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin: 0 0 35px 0;
+}
+
+.modal__form {
+    display: grid;
+    grid-template-columns: 1fr ;
+    row-gap: 32px;
+}
+
+.modal__input {
+    padding: 8px 16px;
+    border: 1px solid #D6DADE;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.modal__input_accent{
+    color: #D90000;
+}
+
+.modal__input-file{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    margin: auto;
+    min-width: 220px;
+    align-items: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    position: relative;
+}
+
+.modal__input label {
+    color: #6A6E72;
+    font-size: 12px;
+}
+
+.modal__input input {
+    padding-top: 5px;
+    border: none;
+    font-size: 16px;
+}
+.modal__input select {
+    padding-top: 5px;
+    border: none;
+    font-size: 16px;
+}
+.modal__input_i{
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.modal__submit {
+    border-radius: 2px;
+    padding: 15px 0;
+    background-color: #E5266E;;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 18px;
+}
+.modal__reset{
+    background: white;
+    color: #0848C0;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    margin: 15px auto;
+    width: 100%;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.input-file__circle{
+    width: 163px;
+    height: 163px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-image: url("Ellipse 44.png");
+    position: relative;
+    margin: auto;
+}
+.circle__input{
+    display: none;
+}
+
+.circle__label {
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 19px;
+    line-height: 28px; /* 150% */
+    text-decoration-line: underline;
+}
+.circle__label p{
+   margin: 0;
+}
+
+
+.input-file__circle img {
+    width: 100%;
+    height: auto;
+}
+.delete-file {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    width: 36px;
+    height: 36px;
+}
+
+@media (min-width: 0px) and (max-width: 900px) {
+    .modal__input-file{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .delete-file {
+        top: 30px;
+        right: 35px;
+    }
+}
+
+@media (min-width: 900px) {
+    .grid-position{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .modal {
+        width: 60%;
+        top: 50%;
+    }
+}

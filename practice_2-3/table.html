@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица данных</title>
+    <style>
+        /* Добавленные стили для сортировки и поиска */
+        th {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<label for="search"></label>
+<input type="text" id="search" placeholder="Поиск...">
+<table id="data-table">
+    <thead>
+    <tr>
+        <th data-sort-by="userId">User ID</th>
+        <th data-sort-by="id">ID</th>
+        <th data-sort-by="title">Title</th>
+        <th data-sort-by="body">Body</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Здесь будут отображаться данные -->
+    </tbody>
+</table>
+
+<script src="table.js">
+
+</script>
+</body>
+</html>
